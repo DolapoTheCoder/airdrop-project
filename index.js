@@ -6,6 +6,7 @@ const {
     LAMPORTS_PER_SOL
 } = require('@solana/web3.js');
 
+//LAMPORT_PER_SOL = A CONVERSION
 
 //new wallet made via keyapir
 const wallet = new Keypair();
@@ -29,7 +30,10 @@ const getWalletBalance = async() => {
 
 const airDropSol = async() => {
     try {
-        
+        const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+        const fromAirDropSignature = await connection.requestAirdrop(publicKey, 2 * LAMPORTS_PER_SOL);
+        await connection.confirmTransaction(fromAirDropSignature);
+
     } catch (error) {
         console.log(error);
     }
