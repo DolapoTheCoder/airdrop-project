@@ -27,6 +27,14 @@ const getWalletBalance = async() => {
     }
 };
 
+const airDropSol = async() => {
+    try {
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const main = async() => {
     await getWalletBalance();
 };
