@@ -14,6 +14,12 @@ const wallet = new Keypair();
 const publicKey = new PublicKey(wallet._keypair.publicKey);
 const secretKey = wallet._keypair.secretKey;
 
-console.log(publicKey);
+//get balance
 
-console.log(secretKey);
+const getWalletBalance = async() => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
