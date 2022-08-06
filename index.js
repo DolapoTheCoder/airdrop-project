@@ -41,6 +41,8 @@ const airDropSol = async() => {
 
 const main = async() => {
     await getWalletBalance();
+    await airDropSol();
+    await getWalletBalance();
 };
 
 main();
